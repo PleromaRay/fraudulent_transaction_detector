@@ -1,5 +1,4 @@
 # fraudulent_transaction_detector
-# Nova Pay Transaction Analysis
 
 Exploratory Data Analysis (EDA) and data cleaning pipeline for the Nova Pay transaction dataset.  
 This project focuses on understanding the data, fixing quality issues, and preparing it for further analysis and modeling (e.g., fraud detection).
