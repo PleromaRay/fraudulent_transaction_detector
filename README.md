@@ -46,4 +46,3 @@ The dataset (`nova_pay_combined.csv`) contained ~11,400 cross-border payment tra
 | device_trust_score     | -0.437      |
 
 Transaction velocity and internal risk score show the strongest positive relationships with fraud, while higher device trust score and older account age are associated with lower fraud rates.
-
