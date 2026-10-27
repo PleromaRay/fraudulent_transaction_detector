@@ -51,9 +51,9 @@ The dataset (`nova_pay_combined.csv`) contains ~11,400 cross-border payment tran
 | Model               | Accuracy | Fraud Precision | Fraud Recall | Fraud F1 |
 |---------------------|----------|-----------------|--------------|----------|
 | Logistic Regression | 0.93     | 0.67            | 0.89         | 0.76     |
-| LightGBM            | 0.98     | 0.92            | 0.88         | 0.90.    |
+| LightGBM            | 0.97     | 0.86            | 0.88         | 0.86     |
 
-LightGBM outperform the logistic regression baseline, improving fraud precision from 0.67 to 0.92 and fraud F1 from 0.76 to 0.90. It better captures non-linear relationships between features such as transaction velocity, device trust, and KYC tier.
+LightGBM outperform the logistic regression baseline, improving fraud precision from 0.67 to 0.86 and fraud F1 from 0.76 to 0.80. It better captures non-linear relationships between features such as transaction velocity, device trust, and KYC tier.
 
 ## How to Run
 
