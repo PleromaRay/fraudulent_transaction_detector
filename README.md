@@ -45,15 +45,25 @@ The dataset (`nova_pay_combined.csv`) contains ~11,400 cross-border payment tran
 4. **Models**:
    - Logistic Regression with `class_weight='balanced'`
    - LightGBM with `class_weight='balanced'`
+   - LightGBM with hyperparameter tuning via RandomizedSearchCV
+
+### Best LightGBM Parameters (after tuning)
+- `n_estimators`: 300
+- `learning_rate`: 0.1
+- `max_depth`: -1
+- `num_leaves`: 20
+- `min_child_samples`: 30
+- `class_weight`: balanced
 
 ## Results
 
 | Model               | Accuracy | Fraud Precision | Fraud Recall | Fraud F1 |
 |---------------------|----------|-----------------|--------------|----------|
 | Logistic Regression | 0.93     | 0.67            | 0.89         | 0.76     |
-| LightGBM            | 0.97     | 0.86            | 0.88         | 0.86     |
+| LightGBM            | 0.98     | 0.92            | 0.88         | 0.90     |
+| LightGBM (tuned)    | 0.98     | 0.96            | 0.88         | 0.92     |
 
-LightGBM outperform the logistic regression baseline, improving fraud precision from 0.67 to 0.86 and fraud F1 from 0.76 to 0.80. It better captures non-linear relationships between features such as transaction velocity, device trust, and KYC tier.
+LightGBM outperform the logistic regression baseline, improving fraud precision from 0.67 to 0.86 and fraud F1 from 0.76 to 0.86. It better captures non-linear relationships between features such as transaction velocity, device trust, and KYC tier. Hyperparameter tuning improved fraud precision from 0.92 to 0.96 and fraud F1 from 0.90 to 0.92 while maintaining the same recall.
 
 ## How to Run
 
